@@ -1,0 +1,48 @@
+/* em funciona tomando el tamanio basado en el tamanio que tenga su contenedor padre
+    rem es relativo al tamanio del documento
+
+1 rem = 10px con el cambio de font-size en html y body
+
+    Especificidad ya que es una hoja de estilos css, si hay dos selectores iguales con distintos valores tomara el valor del ultimo selector pero si el elemento es mas especifico no importa el lugar donde este
+
+
+*/
+:root{
+    --blanco: #fff;
+    --oscuro: #212121;
+    --primario: #ffC107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+}
+.title{
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: 700; /*Igual a bold*/
+}
+.title span{
+    font-size: 2rem;
+}
+.contenedor{
+    width: 120rem;/*1200px*/
+    margin: 0 auto;
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+}
