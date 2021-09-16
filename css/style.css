@@ -16,23 +16,65 @@
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+/*
+    * seleccina el css completo
+    la "," se usa para separar clases para indicar que las propiedades seran las mismas
+     after es contenido que no existe porque es un pseudo elemento
+*/
+*,*:before, *:after{
+    box-sizing: inherit;
 }
 body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
 }
-.title{
-    text-align: center;
+h1{
     font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1, h2, h3{
+    text-align: center;
+}
+.title{
     font-weight: 700; /*Igual a bold*/
 }
 .title span{
     text-align: center;
     font-size: 2rem;
 }
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
 .contenedor{
     max-width: 120rem;/*1200px como maximo y solo si esta ese espacio disponible si no usa el 100%*/
     margin: 0 auto;
+}
+.btn{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700; /*Igual a bold*/
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .btn{
+        width: auto; /**/
+    }
 }
 .nav-bg{
     background-color: var(--secundario);
@@ -58,5 +100,40 @@ body{
 .navegacion-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);
+}
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 45rem;
+}
+.contenido-hero{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);/*Forma anterior*/
+    //background-color: rgb(0 0 0 / 70% );/*Nueva forma*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Alinea horizontalmente por el column*/
+    justify-content: center; /*Alinea verticalmente por el column*/
+}
+/*
+    Opcion 1
+    Tomar el tamanio completo, se toma por el tamanio del elemento padre
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    Opcion 2
+    Toma el tamanio completo pero si hay padding afectara y se tendra que quitar del elemento padre
+    height 100%;
+    width 100%;
+*/
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+
 }
 
