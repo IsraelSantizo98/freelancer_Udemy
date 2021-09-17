@@ -13,6 +13,7 @@
     --primario: #ffC107;
     --secundario: #0097a7;
     --gris: #757575;
+    --grisClaro: #dfe9f3;
 }
 /*Globales*/
 html{
@@ -30,6 +31,8 @@ html{
 body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
+    /*Se agrega la direccion a donde ira el degradado, luego el color y se coloca el porcentaje donde inicia 0% es hasta abajo y 100% hasta arriba*/
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 .contenedor{
     max-width: 120rem;/*1200px como maximo y solo si esta ese espacio disponible si no usa el 100%*/
@@ -48,11 +51,18 @@ body{
     width: 90%;
     text-align: center;
 }
-
 @media (min-width: 768px) {
     .btn{
         width: auto; /**/
     }
+}
+.sombra{
+    -webkit-box-shadow: 10px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 10px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 10px 5px 15px 0px rgba(112,112,112,0.4);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
 }
 /*Tipografia*/
 h1{
@@ -111,6 +121,7 @@ h1, h2, h3{
     background-size: cover;
     position: relative;
     height: 45rem;
+    margin-bottom: 2rem;
 }
 .contenido-hero{
     position: absolute;
