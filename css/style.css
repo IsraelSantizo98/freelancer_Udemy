@@ -79,6 +79,7 @@ h1, h2, h3{
     display: flex;
     align-items: flex-end;
 }
+/*Navegacion Principal*/
 .nav-bg{
     background-color: var(--secundario);
 }
