@@ -182,4 +182,23 @@ h1, h2, h3{
     align-items: center;
     justify-content: space-evenly;
 }
-
+/*Formulario contacto*/
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);/*Utiliza el valor mas pequeño*/
+    margin: 0 auto;
+    /*usar margin 0 auto cuando el padre no sea flex y con elementos que tenga display block*/
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario)
+}
