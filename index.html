@@ -92,36 +92,38 @@
             <p>Nam posuere ante euismod, semper purus ac, efficitur velit. Aliquam at dolor metus.</p>
         </section>
     </div>
-</main>
-<section>
+    <section>
     <h2>Contacto</h2>
-    <form>
+    <form class="formulario">
         <fieldset>
             <!--Legend se usa para dar indicaciones al usuario o poner un titulo-->
             <legend>Contactanos llenado todos los campos</legend>
             <!--Se usa div cuando no hay un titulo o h-->
-            <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" placeholder="Nombre">
-            </div>
-            <div>
-                <label for="telefono">Telefono</label>
-                <input type="tel" name="telefono" placeholder="Telefono">
-            </div>
-            <div>
-                <label for="correo">Correo</label>
-                <input type="email" name="correo" placeholder="Correo">
-            </div>
-            <div>
-                <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje"></textarea>
-            </div>
-            <div>
-                <input type="submit" value="Enviar">
-            </div>
+            <div class="contenedor-campos">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" placeholder="Nombre">
+                </div>
+                <div>
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" name="telefono" placeholder="Telefono">
+                </div>
+                <div>
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo" placeholder="Correo">
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje"></textarea>
+                </div>
+            </div> <!--Este es el final de los compos-->
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
         </fieldset>
     </form>
-</section>
+    </section>
+</main>
 <footer>
     <p>Todos los derechos reservados Israel Santizo Freelancer</p>
 </footer>
